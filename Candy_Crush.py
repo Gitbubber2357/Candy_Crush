@@ -66,7 +66,7 @@ def switch(matrix, start, end):
         return matrix_clone
     
     else:
-        print("Operation Fail")
+        raise ValueError("switch error")
         
         
 def stop(matrix, types):
@@ -302,6 +302,7 @@ def ToS():
         
         elif input_str == "stop":
             end = False
+            
         else:
             if input_str == "U" or input_str == "D" or input_str == "L" or input_str == "R":
                 print("You have been already on the boundary of the table.")
@@ -362,4 +363,4 @@ def ToS():
     if times == 1:
         print( name + " make only %d move to finish the Tower of Saviors." %(times))
     else:
-        print( name + " make %d moves to finish the Tower of Saviors." %(times)) 
+        print( name + " make %d moves to finish the Tower of Saviors." %(times))
