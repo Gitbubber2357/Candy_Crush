@@ -11,13 +11,13 @@ def eliminate(matrix):
     # eliminate the rows
     for i in range(edge):
         for j in range(1,edge-1):
-            if matrix[i,j] == matrix[i,j-1] and matrix[i,j] == matrix[i,j+1]:
+            if matrix[i,j] == matrix[i,j-1] == matrix[i,j+1]:
                 matrix_clone[i,j-1] = matrix_clone[i,j] = matrix_clone[i,j+1] = 0
 
     # eliminate the cols
     for i in range(edge):
         for j in range(1,edge-1):
-            if matrix[j,i] == matrix[j-1,i] and matrix[j,i] == matrix[j+1,i]:
+            if matrix[j,i] == matrix[j-1,i] == matrix[j+1,i]:
                 matrix_clone[j-1,i] = matrix_clone[j,i] = matrix_clone[j+1,i] = 0
                 
     return matrix_clone
